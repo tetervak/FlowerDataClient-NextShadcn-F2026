@@ -37,7 +37,7 @@ export default async function FlowerDetailsPage({
 
       <Card>
         <CardHeader>
-          <CardTitle className="text-3xl">{flower.label}</CardTitle>
+          <CardTitle className="text-3xl text-blue-500">{flower.label}</CardTitle>
 
           <CardDescription className="text-xl">
             ${flower.price.toFixed(2)}

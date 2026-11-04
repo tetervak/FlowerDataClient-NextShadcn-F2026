@@ -2,6 +2,8 @@ import { Geist_Mono, Roboto } from "next/font/google"
 
 import "./globals.css"
 import { cn } from "@/lib/utils";
+import { Footer } from "@/components/footer"
+import { Header } from "@/components/header"
 
 const roboto = Roboto({subsets:['latin'],variable:'--font-sans'})
 
@@ -19,10 +21,24 @@ export default function RootLayout({
     <html
       lang="en"
       suppressHydrationWarning
-      className={cn("antialiased", fontMono.variable, "font-sans", roboto.variable)}
+      className={cn(
+        "antialiased",
+        fontMono.variable,
+        "font-sans",
+        roboto.variable
+      )}
     >
       <body>
-        {children}
+        <div className="flex min-h-screen flex-col justify-between">
+          <div>
+            <Header title="Flower Data" />
+            <main className="container mx-auto max-w-4xl px-4">{children}</main>
+          </div>
+          <Footer
+            course="PROG27545 / Web Application Design and Implementation"
+            name="Alex Tetervak"
+          />
+        </div>
       </body>
     </html>
   )

@@ -16,7 +16,7 @@ export default async function FlowersPage() {
 
   return (
     <main className="container mx-auto p-6">
-      <h1 className="mb-6 text-3xl font-bold">Flowers</h1>
+      <h1 className="mb-6 text-3xl font-bold text-blue-500">Flowers</h1>
 
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {flowers.map((flower) => (
